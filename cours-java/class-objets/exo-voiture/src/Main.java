@@ -11,5 +11,16 @@ public class Main {
 
         System.out.println("La voiture est "+car.color+" et elle dispose "+car.nbPortes+" portes.");
 
+        car.klaxonner();
+
+        int nouvelleVitesse = car.accelerer();
+        System.out.println( "La nouvelle vitesse de la voiture est : "+nouvelleVitesse+" km/h");
+
+
+       int nouveauRapport =  car.passerRapport(true);
+        System.out.println("Nouveau rapport est : "+nouveauRapport);
+
+        car.tourner(true, 10);
+
     }
 }
