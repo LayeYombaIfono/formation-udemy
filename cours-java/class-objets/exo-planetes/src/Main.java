@@ -45,6 +45,14 @@ public class Main {
 
         System.out.println(mars.nom+" a effectué "+mars.rotation(-684)+" tours sur elle même.");
         System.out.println(venus.nom+" a effectué "+venus.rotation(1250)+" tours sur elle même.");
-//        mars.rotation();
+
+//        Exo 18
+        System.out.println("<---------------->");
+        mars.accueillirVaisseau(8);
+        mars.accueillirVaisseau("FREGATE");
+
+        System.out.println(" Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+ mars.totalVisiteurs);
+
+
     }
 }

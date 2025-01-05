@@ -3,24 +3,74 @@
 public class Main {
     public static void main(String[] args) {
 
-        Voiture car = new Voiture();
+        Voiture bmw = new Voiture(); //Instancié la voiture
+        Moteur moteurBmw = new Moteur(); // Instancié le moteur
 
-        car.nbPortes = 3;
-        car.automatique = true;
-        car.color = "Vert";
+        bmw.nbPortes = 4;
+        bmw.automatique = true;
+        bmw.color = "Blanche";
+//        Creation du moteur
+        moteurBmw.carburant = "Diesel";
+        moteurBmw.nbCylindre = 4;
 
-        System.out.println("La voiture est "+car.color+" et elle dispose "+car.nbPortes+" portes.");
+        //Afficher les informations du moteur.
+        System.out.println("La voiture est "+bmw.color+" et elle dispose "+bmw.nbPortes+" portes.");
 
-        car.klaxonner();
+        bmw.moteur = moteurBmw;
+        System.out.println("Le nombre de cylindre de la voiture est de, "+bmw.moteur.nbCylindre+" son type de carburant est "+bmw.moteur.carburant);
 
-        int nouvelleVitesse = car.accelerer();
+//        Créer une nouvelle voiture
+        Voiture odule = new Voiture();
+        Moteur oduleMoteur = new Moteur();
+
+        odule.nbPortes = 6;
+        odule.color = "Rouge";
+        odule.vitesse = 5;
+        odule.automatique = true;
+
+//        Le moteur
+        oduleMoteur.carburant = "Essence";
+        oduleMoteur.nbCylindre=6;
+        odule.moteur = oduleMoteur;
+        //Afficher les informations du moteur.
+        System.out.println("La voiture est "+odule.color+" et elle dispose "+bmw.nbPortes+" portes,"+" le nombre de vitesse est "+odule.vitesse);
+        System.out.println("Le nombre de cylindre de la voiture est de, "+odule.moteur.nbCylindre+" son type de carburant est "+odule.moteur.carburant);
+
+
+
+
+
+        // Début des méthodes
+        bmw.klaxonner();
+
+        int nouvelleVitesse = bmw.accelerer();
         System.out.println( "La nouvelle vitesse de la voiture est : "+nouvelleVitesse+" km/h");
 
+       int nouveauRapport =  bmw.passerRapport(true);
+       System.out.println("Nouveau rapport est : "+nouveauRapport);
 
-       int nouveauRapport =  car.passerRapport(true);
-        System.out.println("Nouveau rapport est : "+nouveauRapport);
+        bmw.tourner(true, 10);
 
-        car.tourner(true, 10);
+        System.out.println("Nouvelle vitesse : "+bmw.accelerer(2));
+
+        // Fin des méthodes
+
+//        Comparaison des chaines de caractères
+        String chaine1 = "Je suis une chaine à comparé";
+        String chaine2 = "Je suis une deuxième chaine à comparé";
+
+       if (chaine1.equals(chaine2)){
+           System.out.println("Les chaines de caractère sont de même ");
+       }else {
+           System.out.println("Les chaines de caractère ne sont pas de même ");
+       }
+
+//Afficher les informations du moteur.
+       bmw.moteur = moteurBmw;
+
+        System.out.println("Le nombre de cylindre de la voiture est de, "+bmw.moteur.nbCylindre+" son type de carburant est "+bmw.moteur.carburant);
+
+
 
     }
 }
