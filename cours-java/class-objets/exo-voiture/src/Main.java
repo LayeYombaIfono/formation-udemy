@@ -70,6 +70,20 @@ public class Main {
 
         System.out.println("Le nombre de cylindre de la voiture est de, "+bmw.moteur.nbCylindre+" son type de carburant est "+bmw.moteur.carburant);
 
+        System.out.println("<-------Informations du voyageur------->");
+//        Tranport des passagers
+        Passager passager = new Passager();
+        passager.nom = "Jean";
+        passager.prenoms = "IFONO";
+
+        Ville kissidougou = new Ville();
+        kissidougou.nomDeLaVille = "Kissidougou";
+
+        Ville destination=bmw.transporter(passager, kissidougou);
+
+        System.out.println("Le passager est arrivé dans la ville de "+destination.nomDeLaVille);
+
+
 
 
     }

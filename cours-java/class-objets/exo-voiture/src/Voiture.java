@@ -42,6 +42,15 @@ public class Voiture {
         System.out.println("La voiture va tourner à "+droiteOuGauche+" dans un angle de " + angle+"°C");
     }
 
+    Ville transporter(Passager passager, Ville villeDePart){
+        System.out.println("Je transport le passager: "+ passager.nom+" "+passager.prenoms);
+        System.out.println("Le passager est partir de la ville de "+villeDePart.nomDeLaVille);
 
+        Ville villeDeDestination = new Ville();
+        villeDeDestination.nomDeLaVille = "Conakry";
+
+        return villeDeDestination;
+
+    }
 
 }
