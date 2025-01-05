@@ -41,7 +41,10 @@ public class Main {
         Planet neuf = new Planet();
         System.out.println(neuf.nom+" est une planète "+neuf.matiere+" avec un diamètre de "+neuf.diametre+" kilomètres.");
 
-        neptune.revolution();
-        mars.rotation();
+        System.out.println(neptune.nom+" a effectué "+neptune.revolution(-3542)+" tours complets autour de son étoile.");
+
+        System.out.println(mars.nom+" a effectué "+mars.rotation(-684)+" tours sur elle même.");
+        System.out.println(venus.nom+" a effectué "+venus.rotation(1250)+" tours sur elle même.");
+//        mars.rotation();
     }
 }
