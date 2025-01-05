@@ -53,6 +53,20 @@ public class Main {
 
         System.out.println(" Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+ mars.totalVisiteurs);
 
+        //        Atmosphère
+        Atmosphere atmosphereUranus = new Atmosphere();
+        atmosphereUranus.tauxHydrogene = 83f;
+        atmosphereUranus.tauxHelium = 15f;
+        atmosphereUranus.tauxDeMethane = 2.5f;
+        uranus.atmosphere = atmosphereUranus;
 
+        System.out.println("L'atmosphère de Uranus est composée :");
+        System.out.println("A "+uranus.atmosphere.tauxHydrogene+"% d'hydrogène.");
+        System.out.println("A "+uranus.atmosphere.tauxHelium+"% d'hélium.");
+        System.out.println("A "+uranus.atmosphere.tauxAzote+"% d'azote.");
+        System.out.println("A "+uranus.atmosphere.tauxDeMethane+"% de méthane.");
+        System.out.println("A "+uranus.atmosphere.tauxArgon+"% de Argon.");
+        System.out.println("A "+uranus.atmosphere.tauxDioxydeDeCarbone+"% Dioxyde de carbone.");
+        System.out.println("A "+uranus.atmosphere.tauxDeSodium+"% de sodium.");
     }
 }
