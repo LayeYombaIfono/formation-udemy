@@ -5,6 +5,7 @@ public class Voiture {
     int rapportCourant;
     int vitesse;
     Moteur moteur;
+    static int nbRoues = 4;
 
     void klaxonner(){
         System.out.println("Pipiiiiiiiiiiiiiiiiii !");

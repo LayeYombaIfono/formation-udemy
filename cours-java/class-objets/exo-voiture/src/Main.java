@@ -83,7 +83,10 @@ public class Main {
 
         System.out.println("Le passager est arrivé dans la ville de "+destination.nomDeLaVille);
 
-
+        System.out.println("<----------EXO-21--------->");
+//        EXO 21
+        System.out.println("Le nombre de roues d'une voiture est de : "+Voiture.nbRoues);
+        System.out.println("Le nombre de roues de voiture BMW est : "+ bmw.nbRoues);
 
 
     }

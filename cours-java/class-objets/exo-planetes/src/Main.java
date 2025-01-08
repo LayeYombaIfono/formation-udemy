@@ -12,22 +12,27 @@ public class Main {
         terre.nom = "Terre";
         terre.diametre = 12756;
         terre.matiere = "Tellurique";
+
         Planet mars = new Planet();
         mars.nom = "Mars";
         mars.diametre = 6792;
         mars.matiere = "Tellurique";
+
         Planet jupiter = new Planet();
         jupiter.nom = "Jupiter";
         jupiter.diametre = 142984;
         jupiter.matiere = "Gazeuse";
+
         Planet saturne = new Planet();
         saturne.nom = "Saturne";
         saturne.diametre = 120536;
         saturne.matiere = "Gazeuse";
+
         Planet uranus = new Planet();
         uranus.nom = "Uranus";
         uranus.diametre = 51118;
         uranus.matiere = "Gazeuse";
+
         Planet neptune = new Planet();
         neptune.nom = "Neptune";
         neptune.diametre = 49532;
@@ -48,12 +53,12 @@ public class Main {
 
 //        Exo 18
         System.out.println("<---------------->");
-        mars.accueillirVaisseau(8);
-        mars.accueillirVaisseau("FREGATE");
+        //mars.accueillirVaisseau(8);
+        //mars.accueillirVaisseau("FREGATE");
 
-        System.out.println(" Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+ mars.totalVisiteurs);
+       // System.out.println(" Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+ mars.totalVisiteurs);
 
-        //        Atmosphère
+        // Atmosphère
         Atmosphere atmosphereUranus = new Atmosphere();
         atmosphereUranus.tauxHydrogene = 83f;
         atmosphereUranus.tauxHelium = 15f;
@@ -68,5 +73,24 @@ public class Main {
         System.out.println("A "+uranus.atmosphere.tauxArgon+"% de Argon.");
         System.out.println("A "+uranus.atmosphere.tauxDioxydeDeCarbone+"% Dioxyde de carbone.");
         System.out.println("A "+uranus.atmosphere.tauxDeSodium+"% de sodium.");
+
+        System.out.println("<------------------>");
+
+//        Méthode vaisseau
+        Vaisseau nouveauVaisseau = new Vaisseau();
+        nouveauVaisseau.type = "FREGATE";
+        nouveauVaisseau.nbPassagers = 9;
+        mars.accueillirVaisseau(nouveauVaisseau);
+
+        Vaisseau autreVaisseau = new Vaisseau();
+        autreVaisseau.type = "CROISSEUR";
+        autreVaisseau.nbPassagers = 42;
+        mars.accueillirVaisseau(autreVaisseau);
+
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur "+ mars.nom + " est actuellement de " + mars.totalVisiteurs);
+
+//        EXO 21
+        System.out.println("La forme d'une planète est : "+Planet.forme);
+        System.out.println("La forme de "+mars.nom +" est: "+Planet.forme);
     }
 }
