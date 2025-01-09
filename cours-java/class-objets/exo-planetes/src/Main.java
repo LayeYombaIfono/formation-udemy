@@ -92,5 +92,18 @@ public class Main {
 //        EXO 21
         System.out.println("La forme d'une planète est : "+Planet.forme);
         System.out.println("La forme de "+mars.nom +" est: "+Planet.forme);
+
+
+        System.out.println("<---------EXO-22------->");
+
+//      EXO 22
+        String expansion1 =  Planet.expansion(10.5);
+        System.out.println(expansion1);
+        String expansion2 =  Planet.expansion(14.2);
+        System.out.println(expansion2);
+
+
+//        EXO 23
+        System.out.println("Nombre de planetes decouvertes est de : "+Planet.nbPlanetesDecouvertes);
     }
 }
