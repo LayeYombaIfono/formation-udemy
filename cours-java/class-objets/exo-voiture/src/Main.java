@@ -17,7 +17,17 @@ public class Main {
         System.out.println("La voiture est "+bmw.color+" et elle dispose "+bmw.nbPortes+" portes.");
 
         bmw.moteur = moteurBmw;
-        System.out.println("Le nombre de cylindre de la voiture est de, "+bmw.moteur.nbCylindre+" son type de carburant est "+bmw.moteur.carburant);
+        System.out.println("Le nombre de cylindre de la voitre est de, "+bmw.moteur.nbCylindre+" son type de carburant est "+bmw.moteur.carburant);
+
+//        Les constructeur
+        Voiture nouvelleVoiture = new Voiture("Banche", true);
+        Voiture messageVoiture = new Voiture();
+
+        System.out.println("La couleur de la nouvelle voiture est: "+nouvelleVoiture.color +" la vitesse est automatique :"+ nouvelleVoiture.automatique);
+        System.out.println(messageVoiture);
+
+
+
 
 //        Créer une nouvelle voiture
         Voiture odule = new Voiture();
@@ -36,20 +46,15 @@ public class Main {
         System.out.println("La voiture est "+odule.color+" et elle dispose "+bmw.nbPortes+" portes,"+" le nombre de vitesse est "+odule.vitesse);
         System.out.println("Le nombre de cylindre de la voiture est de, "+odule.moteur.nbCylindre+" son type de carburant est "+odule.moteur.carburant);
 
-
-
-
-
         // Début des méthodes
-        bmw.klaxonner();
-
+        Voiture.klaxonner();
         int nouvelleVitesse = bmw.accelerer();
         System.out.println( "La nouvelle vitesse de la voiture est : "+nouvelleVitesse+" km/h");
 
        int nouveauRapport =  bmw.passerRapport(true);
        System.out.println("Nouveau rapport est : "+nouveauRapport);
 
-        bmw.tourner(true, 10);
+        Voiture.tourner(true, 10);
 
         System.out.println("Nouvelle vitesse : "+bmw.accelerer(2));
 
@@ -79,14 +84,14 @@ public class Main {
         Ville kissidougou = new Ville();
         kissidougou.nomDeLaVille = "Kissidougou";
 
-        Ville destination=bmw.transporter(passager, kissidougou);
+        Ville destination=Voiture.transporter(passager, kissidougou);
 
         System.out.println("Le passager est arrivé dans la ville de "+destination.nomDeLaVille);
 
         System.out.println("<----------EXO-21--------->");
 //        EXO 21
         System.out.println("Le nombre de roues d'une voiture est de : "+Voiture.nbRoues);
-        System.out.println("Le nombre de roues de voiture BMW est : "+ bmw.nbRoues);
+        System.out.println("Le nombre de roues de voiture BMW est : "+ Voiture.nbRoues);
 
 
     }
