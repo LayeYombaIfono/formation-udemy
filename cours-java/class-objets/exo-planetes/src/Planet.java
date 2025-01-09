@@ -9,7 +9,8 @@ public class Planet {
 
     static int nbPlanetesDecouvertes;
 
-    Planet(){
+    Planet(String nom){
+        this.nom = nom;
         nbPlanetesDecouvertes++;
     }
 
