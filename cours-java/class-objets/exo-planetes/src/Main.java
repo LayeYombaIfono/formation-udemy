@@ -101,5 +101,29 @@ public class Main {
 
 //        EXO 23
         System.out.println("Nombre de planetes decouvertes est de : "+Planet.nbPlanetesDecouvertes);
+
+        System.out.println("<-------------------EXO 24-------------------------->");
+
+//        EXO 24
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        chasseur.blindage = 156;
+        chasseur.resistanceDuBouclier = 2;
+        chasseur.type = "CHASSEUR";
+
+        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        vaisseauMonde.blindage = 4784;
+        vaisseauMonde.resistanceDuBouclier = 30;
+        vaisseauMonde.type = "VAISSEAU-MONDE";
+
+       vaisseauMonde.activerBouclier();
+       chasseur.activerBouclier();
+
+       chasseur.attaque(vaisseauMonde, "Lasers photonique", 3);
+
+       vaisseauMonde.desactiverBouclier();
+
+        System.out.println("La résistance du bouclier du vaisseau est "+vaisseauMonde.resistanceDuBouclier);
+        System.out.println("Le blingade du vaisseau monde est "+vaisseauMonde.blindage);
+
     }
 }
