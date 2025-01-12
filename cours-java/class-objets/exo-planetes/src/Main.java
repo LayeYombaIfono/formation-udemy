@@ -125,5 +125,6 @@ public class Main {
         System.out.println("La résistance du bouclier du vaisseau est "+vaisseauMonde.resistanceDuBouclier);
         System.out.println("Le blingade du vaisseau monde est "+vaisseauMonde.blindage);
 
+
     }
 }
