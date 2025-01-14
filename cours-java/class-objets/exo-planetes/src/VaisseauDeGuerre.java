@@ -21,4 +21,10 @@ public class VaisseauDeGuerre extends Vaisseau {
         armesDesactivees = true;
 
     }
+
+    @Override
+    void activerBouclier()  {
+        this.desactiveArmes();
+        super.activerBouclier();
+    }
 }

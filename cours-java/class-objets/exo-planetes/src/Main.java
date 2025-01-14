@@ -103,7 +103,7 @@ public class Main {
         chasseur.resistanceDuBouclier = 2;
         chasseur.type = "CHASSEUR";
 
-        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        Vaisseau vaisseauMonde = new VaisseauCivil();
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceDuBouclier = 30;
         vaisseauMonde.type = "VAISSEAU-MONDE";
@@ -111,7 +111,7 @@ public class Main {
        vaisseauMonde.activerBouclier();
        chasseur.activerBouclier();
 
-       chasseur.attaque(vaisseauMonde, "Lasers photonique", 3);
+        chasseur.attaque(vaisseauMonde, "Lasers photonique", 3);
 
        vaisseauMonde.desactiverBouclier();
 
