@@ -1,10 +1,8 @@
 public class Planet {
     String nom;
-    String matiere;
     long diametre;
-    int totalVisiteurs=0;
     Atmosphere atmosphere;
-    Vaisseau vaisseauActuellementAcoste;
+
     static String forme = "Sphérique";
 
     static int nbPlanetesDecouvertes;
@@ -24,7 +22,7 @@ public class Planet {
        return angle/360;
     }
 
-    void accueillirVaisseau(Vaisseau vaisseau){
+   /* Vaisseau accueillirVaisseau(Vaisseau vaisseau){
         totalVisiteurs = totalVisiteurs + vaisseau.nbPassagers;
 
         if (vaisseauActuellementAcoste==null){
@@ -34,7 +32,8 @@ public class Planet {
             System.out.println("Un vaisseau de type "+vaisseauActuellementAcoste.type +" doit s'en aller");
         }
         vaisseauActuellementAcoste = vaisseau;
-    }
+        return vaisseau;
+    }*/
 
     /*
     void accueillirVaisseau(String typeVerseau){

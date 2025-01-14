@@ -1,42 +1,35 @@
 public class Main {
     public static void main(String[] args) {
-        Planet mercure = new Planet("Mercure");
 
+        PalnetTellurique mercure = new PalnetTellurique("Mercure");
         mercure.diametre = 4880;
-        mercure.matiere = "Tellurique";
-        Planet venus = new Planet( "Venus");
+
+        PalnetTellurique venus = new PalnetTellurique( "Venus");
         venus.diametre = 12100;
-        venus.matiere = "Tellurique";
-        Planet terre = new Planet("Terre");
+
+        PalnetTellurique terre = new PalnetTellurique("Terre");
         terre.diametre = 12756;
-        terre.matiere = "Tellurique";
 
-        Planet mars = new Planet( "Mars");
-        mars.nom = "Mars";
+        PalnetTellurique mars = new PalnetTellurique( "Mars");
         mars.diametre = 6792;
-        mars.matiere = "Tellurique";
 
-        Planet jupiter = new Planet("Jupiter");
+        PlanetGazeuse jupiter = new PlanetGazeuse("Jupiter");
         jupiter.diametre = 142984;
-        jupiter.matiere = "Gazeuse";
 
-        Planet saturne = new Planet("Saturne");
 
+        PlanetGazeuse saturne = new PlanetGazeuse("Saturne");
         saturne.diametre = 120536;
-        saturne.matiere = "Gazeuse";
 
-        Planet uranus = new Planet("Uranus");
-
+        PlanetGazeuse uranus = new PlanetGazeuse("Uranus");
         uranus.diametre = 51118;
-        uranus.matiere = "Gazeuse";
 
-        Planet neptune = new Planet("Neptune");
+        PlanetGazeuse neptune = new PlanetGazeuse("Neptune");
         neptune.diametre = 49532;
-        neptune.matiere = "Gazeuse";
 
 
 
-        System.out.println(jupiter.nom+" est une planète "+jupiter.matiere+" avec un diamètre de "+jupiter.diametre+" kilomètres.");
+
+        System.out.println(jupiter.nom+" est une planète  avec un diamètre de "+jupiter.diametre+" kilomètres.");
 
 
 //        Planet neuf = new Planet();
@@ -126,5 +119,9 @@ public class Main {
         System.out.println("Le blingade du vaisseau monde est "+vaisseauMonde.blindage);
 
 
+//        EXO-26
+
+        mars.accueillirVaisseau(vaisseauMonde);
+        mars.accueillirVaisseau(chasseur);
     }
 }
