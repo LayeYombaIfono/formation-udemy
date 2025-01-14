@@ -11,6 +11,12 @@ public class PalnetTellurique extends Planet implements Habitable{
 
     @Override
     public Vaisseau accueillirVaisseau(Vaisseau nouveauVaisseau) {
+
+        if (nouveauVaisseau instanceof VaisseauDeGuerre){
+           ((VaisseauDeGuerre) nouveauVaisseau).desactiveArmes();
+
+        }
+
         totalVisiteurs+=nouveauVaisseau.nbPassagers;
         Vaisseau vaisseauPrecedent = vaisseauAcoste;
         vaisseauAcoste = nouveauVaisseau;
