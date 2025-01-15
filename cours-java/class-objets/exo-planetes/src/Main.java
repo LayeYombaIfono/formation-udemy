@@ -66,13 +66,11 @@ public class Main {
         System.out.println("<------------------>");
 
 //        Méthode vaisseau
-        Vaisseau nouveauVaisseau = new Vaisseau();
-        nouveauVaisseau.type = "FREGATE";
+        Vaisseau nouveauVaisseau = new VaisseauDeGuerre("FREGATE");
         nouveauVaisseau.nbPassagers = 9;
         mars.accueillirVaisseau(nouveauVaisseau);
 
-        Vaisseau autreVaisseau = new Vaisseau();
-        autreVaisseau.type = "CROISSEUR";
+        Vaisseau autreVaisseau = new VaisseauDeGuerre("CROISEUR");
         autreVaisseau.nbPassagers = 42;
         mars.accueillirVaisseau(autreVaisseau);
 
@@ -98,15 +96,15 @@ public class Main {
         System.out.println("<-------------------EXO 24-------------------------->");
 
 //        EXO 24
-        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre("CHASSEUR");
         chasseur.blindage = 156;
         chasseur.resistanceDuBouclier = 2;
-        chasseur.type = "CHASSEUR";
+//        chasseur.type = "CHASSEUR";
 
-        Vaisseau vaisseauMonde = new VaisseauCivil();
+        Vaisseau vaisseauMonde = new VaisseauCivil("VAISSEAU-MONDE");
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceDuBouclier = 30;
-        vaisseauMonde.type = "VAISSEAU-MONDE";
+//        vaisseauMonde.type = "VAISSEAU-MONDE";
 
        vaisseauMonde.activerBouclier();
        chasseur.activerBouclier();
@@ -120,8 +118,36 @@ public class Main {
 
 
 //        EXO-26
-
         mars.accueillirVaisseau(vaisseauMonde);
         mars.accueillirVaisseau(chasseur);
+
+
+//        EXO-27
+//        construire le chasseur
+        Vaisseau chasseurSurTerre = new VaisseauDeGuerre("CHASSEUR");
+        terre.accueillirVaisseau(chasseurSurTerre);
+        System.out.println("Le chasseur a rejeté " + chasseurSurTerre.emporterCargaison(20)+" tonnes.");
+
+//        Construire les frégates apartir de la classe VaisseauDeGuerre
+
+//        Frégate 1
+        Vaisseau fregateSurTerre1 = new VaisseauDeGuerre("FREGATE");
+        fregateSurTerre1.nbPassagers = 100;
+        terre.accueillirVaisseau(fregateSurTerre1);
+        System.out.println("La frégate a été rejeté "+ fregateSurTerre1.emporterCargaison(45)+" tonnes");
+        System.out.println("La frégate a été rejeté "+ fregateSurTerre1.emporterCargaison(12)+" tonnes");
+
+//        Frégate 2
+        Vaisseau fregateSurTerre2 = new VaisseauDeGuerre("FREGATE");
+        fregateSurTerre2.nbPassagers = 14;
+        terre.accueillirVaisseau(fregateSurTerre2);
+        System.out.println("La frégate 2 a rejeté "+ fregateSurTerre2.emporterCargaison(30)+" tonnes");
+
+
+//        Construire vaisseau-monde apartir de la classe VaisseauCivil
+        Vaisseau vaisseauMondeSurTerre = new VaisseauCivil("VAISSEAU-MONDE");
+        terre.accueillirVaisseau(vaisseauMondeSurTerre);
+        System.out.println("Le vaisseau monde a rejeté "+vaisseauMondeSurTerre.emporterCargaison(1560)+" tonnes.");
+        System.out.println("Le vaisseau monde a rejeté "+vaisseauMondeSurTerre.emporterCargaison(600)+" tonnes.");
     }
 }
