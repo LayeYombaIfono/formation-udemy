@@ -3,6 +3,7 @@ public class VaisseauDeGuerre extends Vaisseau {
     boolean armesDesactivees;
 
 //    Constructeur
+
     VaisseauDeGuerre(String type){
         this.type = type;
 
@@ -14,13 +15,10 @@ public class VaisseauDeGuerre extends Vaisseau {
             tonnageMax = 100;
         }
 
-
-        /*switch (type) {
-            case "CHASSEUR" -> tonnageMax = 0;
-            case "FREGATE" -> tonnageMax = 50;
-            case "CROISEUR" -> tonnageMax = 100;
-        }*/
     }
+
+
+
 
     void attaque(Vaisseau vaisseauAttaquer, String armeUtilisee, int dureeAttaque){
 
@@ -58,7 +56,7 @@ public class VaisseauDeGuerre extends Vaisseau {
         } else {
             int tonnagePassagers = 2 * nbPassagers;
             int tonnageRestant =  tonnageMax - tonnageActuel;
-            int tonnageAConsiderer = (tonnagePassagers < tonnageRestant ? tonnagePassagers : tonnageRestant);
+            int tonnageAConsiderer = (Math.min(tonnagePassagers, tonnageRestant));
 
             if (cargaison > tonnageAConsiderer){
                 tonnageActuel = tonnageMax;

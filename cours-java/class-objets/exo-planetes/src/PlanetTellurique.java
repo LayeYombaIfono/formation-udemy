@@ -1,11 +1,11 @@
-public class PalnetTellurique extends Planet implements Habitable{
+public class PlanetTellurique extends Planet implements Habitable{
 
     Vaisseau vaisseauAcoste;
     int totalVisiteurs;
 
 
 
-    PalnetTellurique(String nom) {
+    PlanetTellurique(String nom) {
         super(nom);
     }
 
