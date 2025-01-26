@@ -1,9 +1,9 @@
 public class Atmosphere {
-    float tauxHydrogene;
-    float tauxDeMethane;
-    float tauxAzote;
-    float tauxHelium;
-    float tauxArgon;
-    float tauxDioxydeDeCarbone;
-    float tauxDeSodium;
+    Float tauxHydrogene;
+    Float tauxDeMethane;
+    Float tauxAzote;
+    Float tauxHelium;
+    Float tauxArgon;
+    Float tauxDioxydeDeCarbone;
+    Float tauxDeSodium;
 }

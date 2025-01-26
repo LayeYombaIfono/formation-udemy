@@ -47,6 +47,7 @@ public class Main {
         Vaisseau vaisseauMonde = new VaisseauCivil("VAISSEAU-MONDE");
         vaisseauMonde.nbPassagers = 20;
 
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.println("Quel vaisseau souhaitez-vous sélectionner ?");
         String vaisseauSelectionne = sc.nextLine();
@@ -81,8 +82,52 @@ public class Main {
         int rejet = vaisseau.emporterCargaison(tonnage);
 
         System.out.println("Le rejet est de "+rejet);
+        */
+
+        //EXO 31;
+        Atmosphere atmosphereUranus = new Atmosphere();
+        atmosphereUranus.tauxHydrogene = new Float(83f);
+        atmosphereUranus.tauxHelium = new Float(15f);
+        atmosphereUranus.tauxDeMethane = new Float(2.5f);
+        atmosphereUranus.tauxAzote = new Float( 0.0f);
 
 
+        uranus.atmosphere = atmosphereUranus;
+
+        System.out.println("L'atmosphère de Uranus est composée :");
+        if (uranus.atmosphere.tauxHydrogene != null){
+            System.out.println("A "+uranus.atmosphere.tauxHydrogene+"% d'hydrogène.");
+        }
+
+        if (uranus.atmosphere.tauxHelium != null){
+            System.out.println("A "+uranus.atmosphere.tauxHelium+"% d'hélium.");
+        }
+
+        if (uranus.atmosphere.tauxAzote != null){
+            System.out.println("A "+uranus.atmosphere.tauxAzote+"% d'azote.");
+        }
+        if (uranus.atmosphere.tauxDeMethane != null){
+            System.out.println("A "+uranus.atmosphere.tauxDeMethane+"% de méthane.");
+        }
+
+        if (uranus.atmosphere.tauxArgon != null){
+            System.out.println("A "+uranus.atmosphere.tauxArgon+"% de Argon.");
+        }
+
+        if (uranus.atmosphere.tauxDioxydeDeCarbone != null){
+            System.out.println("A "+uranus.atmosphere.tauxDioxydeDeCarbone+"% Dioxyde de carbone.");
+        }
+
+        if (uranus.atmosphere.tauxDeSodium != null){
+            System.out.println("A "+uranus.atmosphere.tauxDeSodium+"% de sodium.");
+        }
+
+
+
+
+
+
+        //System.out.println(uranus.atmosphere);
 
 
 
